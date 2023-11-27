@@ -22,14 +22,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6891678212:AAGzSKzgagUiSbn3Yv-cmlLr5YW4dcM3fUE",
-             api_id= 26368249,
-             api_hash= "ac2db262d5eb7ce0efc0162404c8d172")
+             bot_token= "6871174799:AAESQ_qgNPCLsBI_WNYdHDqyJYWMa-H3Q8I",
+             api_id= 22609670,
+             api_hash= "3506d8474ad1f4f5e79b7c52a5c3e88d")
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /LPRPDV")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /vps")
 
 
 @bot.on_message(filters.command("stop"))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["LPRPDV"]))
+@bot.on_message(filters.command(["vps"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file for download')
     input: Message = await bot.listen(editable.chat.id)
@@ -162,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**Vid_id  »** {str(count).zfill(3)}\n**Title  »** {name1} {res} 🄻🄿🅁🄿🄳🅅.mkv\n**Batch »** {raw_text0}\n\n'
-                cc1 = f'**Vid_id  »** {str(count).zfill(3)}\n**Title »** {name1} 🄻🄿🅁🄿🄳🅅.pdf \n**Batch »** {raw_text0}\n\n'
+                cc = f'**Vid_id  »** {str(count).zfill(3)}\n**Title  »** {name1} {res} jawan.mkv\n**Batch »** {raw_text0}\n\n'
+                cc1 = f'**Vid_id  »** {str(count).zfill(3)}\n**Title »** {name1} jawan.pdf \n**Batch »** {raw_text0}\n\n'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
